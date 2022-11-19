@@ -1,0 +1,22 @@
+a,
+a:hover{
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FF0000;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+	font-weight: 400;
+}
+
+
+
+

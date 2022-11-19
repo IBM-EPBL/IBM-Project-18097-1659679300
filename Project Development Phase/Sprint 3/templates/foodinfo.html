@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<title>Nutrify</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexstyle.css')}}">
+{% endblock %}
+
+{% block body %}
+<br>
+<br>
+<br>
+
+<div class="foodinfomain">
+<div class="foodinfo card">
+    <div class="row">
+        <div class="col-lg-6">
+            <img class="fo" src="{{files[8]}}" alt="">
+
+        </div>
+<div class="col-lg-6">
+   
+    <p>Food item: {{files[1]}}</p>
+    <hr>
+    <p>Calories: {{files[2]}} Kcal</p>
+    <hr>
+    <p>Carbs: {{files[3]}} Gm</p>
+    <hr>
+    <p>Fat: {{files[4]}} Gm</p>
+    <hr>
+    <p>Protein: {{files[5]}} Gm</p>
+  
+</div>
+    </div>
+   
+</div>
+</div>
+
+
+
+{% endblock %}

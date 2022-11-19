@@ -1,0 +1,10 @@
+Flask==2.2.2
+Flask_Mail==0.9.1
+openapi_client==1.1.7
+Flask-WTF
+WTForms
+email_validator
+ibm-db
+sendgrid
+Python-dotenv
+ibm-cos-sdk

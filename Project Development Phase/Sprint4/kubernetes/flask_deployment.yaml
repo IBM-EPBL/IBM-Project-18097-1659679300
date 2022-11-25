@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nutrini
+
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nutrini
+  template:
+    metadata:
+      labels:
+        app: nutrini
+
+    spec:
+      containers:
+        - name: nutrini-container
+          image: icr.io/nutrini/nutrini
+          ports:
+            - containerPort: 5000
+              protocol: TCP

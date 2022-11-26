@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% from "_render_field.html" import render_error_field %}
+
+{% block head %}
+<title>Registration</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/login_style.css')}}">
+{% endblock %}
+
+{% block body %}
+   <div class="container h-100">
+    <div class="wrapper">
+        <div class="card">
+            <form class="d-flex flex-column" action="{{ url_for('signup') }}" method="POST" novalidate>
+                {{ form.csrf_token }}
+                <div class="h3 text-center text-white">Sign Up</div>
+                <div class="d-flex align-items-center input-field my-3 mb-4">
+                    <span class="far fa-user p-2"></span>
+                    {{ form.username(class="form-control", placeholder="Username") }}
+                </div>
+                {{ render_error_field(form.username) }}
+
+                <div class="d-flex align-items-center input-field mb-4">
+                    <span class="far fa-envelope p-2"></span>
+                    {{ form.email(class="form-control", placeholder="Email") }}
+                </div>
+                {{ render_error_field(form.email) }}
+
+                <div class="d-flex align-items-center input-field mb-4">
+                    <span class="fas fa-lock p-2"></span>
+                    {{ form.pass1(class="form-control", placeholder="New Password", id='pwd') }}
+                    <button type="button" class="btn" onclick="showPassword()">
+                        <span class="fas fa-eye-slash"></span>
+                    </button>
+                </div>
+                {{ render_error_field(form.pass1) }}
+
+                <div class="d-flex align-items-center input-field mb-4">
+                    <span class="fas fa-lock p-2"></span>
+                    {{ form.pass2(class="form-control", placeholder="New Password", id='pwd1') }}
+                    <button type="button" class="btn" onclick="Password()">
+                        <span class="fas fa-eye-slash"></span>
+                    </button>
+                </div>
+                {{ render_error_field(form.pass2) }}
+
+                <div class="my-3">
+                    <input type="submit" value="Register" class="btn btn-primary">
+                </div>
+
+                <div class="mb-3">
+                    <span class="text-light-white">Already have an account?</span>
+                    <a href="/login">Login</a>
+                </div>
+                
+            </form>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

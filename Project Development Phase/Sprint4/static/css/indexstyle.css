@@ -1,0 +1,246 @@
+
+body, html {
+    height: 100%;
+  }
+a,
+a:hover{
+	text-decoration: none;
+}
+
+a:hover{
+	color: #FF0000;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	font-size: 100%;
+	font-weight: 400;
+}
+
+::-webkit-scrollbar{
+	width: 0.625rem;
+}
+
+::-webkit-scrollbar-track{
+	background: white;
+}
+
+::-webkit-scrollbar-thumb{
+	background: #AB2C48;
+}
+
+.navigation-wrap{
+
+    background-color:#ddd;
+	position: fixed;
+	width: 100%;
+	left:0;
+	z-index: 1000;
+	-webkit-transition:all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item{
+	padding: 0 0.625rem;
+	transition: all 200ms linear;
+}
+
+.navbar-toggler:focus{
+	outline: unset;
+	border: unset;
+	box-shadow: none;
+}
+
+.nav-item .nav-link{
+	font-size: 0.9375rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: #D12B10;
+	letter-spacing: 1px;
+}
+.nav-item .nav-link a:hover{
+	color: #FF0000;
+}
+
+.navigation-wrap.scroll-on{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	background: white;
+	box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.09);
+	transition: all .15s ease-in-0ut 0s;
+}
+
+#home{
+    height: 100%;
+}
+
+.test{
+    height: 100%;
+    position: relative;
+}
+
+.top-banner{
+	width: 80%;
+
+	padding: 10rem 0 7rem;
+   
+}
+
+.main{
+  background-image: url('/static/images/testy.jpg');
+  height: 100%;
+  width: 100%;
+  font-size: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.upload{
+    padding: 4%;
+    margin:7%;
+ 
+    box-shadow: 10px 10px 10px #ddd;
+}
+
+.piccard{
+width: 30%;
+padding: 2%;
+border-radius: 7rem;
+}
+
+.pic{
+    margin-bottom: 7%;
+}
+
+.foodinfomain{
+ 
+padding: 3%;
+}
+
+
+.foodinfo{
+    text-align: right;
+    position: absolute;
+  top: 20%;
+  left: 25%;
+    padding: 2%;
+    width:50%;
+   border-radius: 2rem;
+   box-shadow: 10px 10px 10px #ddd;
+   font-size: 20px;
+
+
+}
+.fo{
+    width: 130%;
+}
+
+.top-banner h1{
+	font-size: 48px;
+}
+
+.top-banner1{
+	width: 100%;
+	padding: 9.875rem 0 7.375rem;
+}
+
+.feature-heading{
+	text-align: center;
+}
+
+.serv-field {
+    padding-top: 50px;
+}
+.serv-field .serv-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 2px 2px 5px rgba(136, 136, 136, 0.3);
+    transition:  0.4s ease
+}
+.serv-field .serv-box:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-color:#5C46F9;
+}
+.serv-field .serv-box .icon {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    color:#5C46F9;
+    border-radius: 50%;
+}
+.serv-field .serv-box .icon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #F7F7FC;
+    z-index: -1;
+}
+.serv-field .serv-box .icon i {
+    font-size: 30px;
+}
+.serv-field .serv-box h4 {
+    font-size: 25px;
+    color:  #090719;
+}
+.serv-field .serv-box p {
+    color:  #787878;
+    margin-bottom: 0px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding-top: 50px;
+}
+footer a {
+   color: #fff;
+    transition: color 0.4s ease;
+    text-decoration: none;
+}
+footer a:hover{
+ color: #D12B10;
+}
+footer ul {
+    padding-left: 0;
+}
+footer .foot-logo {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 700;
+   
+    margin-bottom: 15px;
+}
+footer .foot-info > div {
+    display: flex;
+    margin-bottom: 15px;
+}
+footer .foot-info > div i {
+    width: 35px;
+    font-size: 18px;
+}

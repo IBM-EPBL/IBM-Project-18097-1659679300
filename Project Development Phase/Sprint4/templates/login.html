@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% from "_render_field.html" import render_error_field %}
+
+{% block head %}
+<title>Login</title>
+<link rel="stylesheet" href="{{url_for('static', filename='css/login_style.css')}}">
+{% endblock %}
+
+
+{% block body %}
+<div class="container h-100">
+    <div class="wrapper">
+        <div class="card">
+            <form class="d-flex flex-column" method="POST" action="{{ url_for('login') }}" novalidate >
+                {{ form.csrf_token }}
+                <div class="h3 text-center text-white">Login</div>
+                <div class="d-flex align-items-center input-field my-3 mb-4">
+                    <span class="far fa-envelope p-2"></span>
+                    {{ form.email(class="form-control", placeholder="Email") }}  
+                    <!-- <input type="text" placeholder="Email" required class="form-control"> -->
+                </div>
+                {{ render_error_field(form.email) }}
+                <div class="d-flex align-items-center input-field mb-4">
+                    <span class="fas fa-lock p-2"></span>
+                    {{ form.password(class="form-control", id="pwd", placeholder="Password") }}
+                    <!-- <input type="password" placeholder="Password" required class="form-control" id="pwd"> -->
+                    <button type="button" class="btn" onclick="showPassword()">
+                        <span class="fas fa-eye-slash"></span>
+                    </button>
+                </div>
+                {{ render_error_field(form.password) }}
+                <div class="my-3">
+                    <input type="submit" value="Login" class="btn btn-primary">
+                </div>
+                <div class="d-sm-flex align-items-sm-center justify-content-sm-between my-3">
+                    <div class="mt-sm-0 mt-3"><a href="/forgot">Forgot password?</a></div>
+                </div>
+
+                <div class="mb-3">
+                    <span class="text-light-white">Don't have an account?</span>
+                    <a href="/signup">Sign Up</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
